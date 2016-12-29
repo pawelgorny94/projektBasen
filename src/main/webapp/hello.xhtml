@@ -16,8 +16,12 @@
 		<br></br>
 		<h:inputText id="surname" value="#{helloBean.name}"></h:inputText>
 		<br></br>
-		<h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
-<p:commandButton actionListener="#{buttonView.buttonAction}" id="iconOnly" icon="ui-icon-pencil"  title="Icon Only" />
+		
+		<h:commandButton value="Welcome" action="welcome"></h:commandButton>
+        <h:commandButton value="Pracownik" action="pracownik"></h:commandButton>
+        <h:commandButton value="Administrator" action="administrator"></h:commandButton>
+	
+	
 	</h:form>
 </h:body>
 </html>

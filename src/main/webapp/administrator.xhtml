@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<body> 
+<h:form>
+		<p:panel id="panel1" header="Administrator"
+			style="margin:1pt; margin-top: 10pt" toggleable="true">
+			<h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="0">
+				<h:form>
+					<p:growl id="messages" showDetail="false" />
+					<p:commandButton value="Ustal cennik" style="width:100px;height:100px;margin-bottom:10px;background-color:#4da6ff" actionListener="#{dialogView.destroyWorld}" update="messages">
+        <p:confirm header="Ustalanie cennika" message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
+        
+    </p:commandButton>
+    <br />
+    <p:commandButton value="Raporty" style="width:100px;height:100px;margin-bottom:10px;background-color:#4da6ff" actionListener="#{dialogView.destroyWorld}" update="messages">
+        <p:confirm header="Ustalanie cennika" message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
+        
+    </p:commandButton>
+    <br />
+    <p:commandButton value="Wyloguj"  style="width:100px;height:100px;background-color:#4da6ff" action="hello" update="messages">
+       
+        
+    </p:commandButton>
+ 
+    <p:confirmDialog global="true"  showEffect="fade" hideEffect="fade">
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+    <p:outputLabel  value="Bilet normalny:" />
+       <p:inputText size="10"></p:inputText>
+ 
+        <p:outputLabel  value="Bilet ulgowy: " />
+        <p:inputText size="10"></p:inputText>
+        
+       
+ 
+        <p:outputLabel  value="Karnet miesieczny normalny: " />
+        <p:inputText size="10"></p:inputText>
+        
+        <p:outputLabel  value="Karnet roczny normalny:" />
+       <p:inputText size="10"></p:inputText>
+ 
+        <p:outputLabel  value="Karnet roczny ulgowy: " />
+        <p:inputText size="10"></p:inputText>
+        
+        <p:outputLabel  value="Karnet miesieczny ulgowy: " />
+        <p:inputText size="10" ></p:inputText>
+ </h:panelGrid>
+        <p:commandButton value="Zapisz zmiany" type="button" style="float:right; postion:relative" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        <p:commandButton value="Anuluj" type="button" style="float:right" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+        
+    </p:confirmDialog>
+					
+				
+					
+				</h:form>
+
+
+
+
+			</h:panelGrid>
+		</p:panel>
+
+	</h:form>
+</body> 
+</html>
