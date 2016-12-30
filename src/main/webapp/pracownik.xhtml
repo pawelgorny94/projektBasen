@@ -7,59 +7,50 @@
 
 <h:head>
 	<title>JSF Main Page</title>
+	<link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
 </h:head>
 <h:body>
 	<h:form>
+
 		<p:panel id="panel1" header="Pracownik"
 			style="margin:10pt; margin-top: 10pt" toggleable="true">
 			<h:panelGrid columns="3" cellpadding="0">
 				<h:form>
-					<p:growl id="messages" showDetail="false" />
-					<p:menu toggleable="true" style="margin:-14pt; margin-top: 10pt">
-						<p:submenu label="Sprzedaż">
-							<p:menuitem value="Bilet" actionListener="#{menuView.save}"
-								update="messages" icon="ui-icon-disk" />
-							<p:menuitem value="Karnet" actionListener="#{menuView.update}"
-								update="messages" icon="ui-icon-arrowrefresh-1-w" />
-							<p:menuitem value="Sprzęt" actionListener="#{menuView.update}"
-								update="messages" icon="ui-icon-arrowrefresh-1-w" />
-						</p:submenu>
-						<p:submenu label="Stan">
-							<p:menuitem value="Wejście" actionListener="#{menuView.delete}"
-								update="messages" ajax="false" icon="ui-icon-close" />
-							<p:menuitem value="Wyjście" actionListener="#{menuView.delete}"
-								update="messages" ajax="false" icon="ui-icon-close" />
-						</p:submenu>
-						<p:submenu label="Zapełnienie obiektu">
-							<p:menuitem value="Wejście" actionListener="#{menuView.delete}"
-								update="messages" ajax="false" icon="ui-icon-close" />
-							<p:menuitem value="Wyjście" actionListener="#{menuView.delete}"
-								update="messages" ajax="false" icon="ui-icon-close" />
-						</p:submenu>
-						<p:submenu label="Rezerwacje">
-							<p:menuitem value="Wyświetl" url="http://www.primefaces.org"
-								icon="ui-icon-home" />
-						</p:submenu>
-						<p:submenu label="Raporty">
-							<p:menuitem value="Bilety" url="http://www.primefaces.org"
-								icon="ui-icon-home" />
-							<p:menuitem value="Karnety" url="http://www.primefaces.org"
-								icon="ui-icon-star" />
-							<p:menuitem value="Klienci" url="http://www.primefaces.org"
-								icon="ui-icon-star" />
-						</p:submenu>
-					</p:menu>
-					<h:commandButton  value="Wyloguj" action="hello"
-						style="margin:-14pt; margin-top: 10pt"></h:commandButton>
-
+					<p:commandButton value="Sprzedaż"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					<br />
+					<p:commandButton value="Wejście"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					<br />
+					<p:commandButton value="Wyjście"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					
 				</h:form>
-
-
-
-
+				<h:form>
+					<p:commandButton value="Rezerwacje"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					<br />
+					<p:commandButton value="Raporty"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					<br />
+					<p:commandButton value="Stan"
+						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	                padding-top: 75px;color: black"
+						action="hello"></p:commandButton>
+					
+				</h:form>
 			</h:panelGrid>
 		</p:panel>
-
 	</h:form>
 </h:body>
 </html>
