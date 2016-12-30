@@ -5,7 +5,9 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"> 
 
-<h:head></h:head> 
+<h:head>
+ <link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+</h:head> 
 <body> 
 <h:form>
 		<p:panel id="panel1" header="Administrator"
@@ -14,7 +16,7 @@
 				<h:form>
 					<p:growl id="messages" showDetail="false" />
 					<p:commandButton value="Ustal cennik" style="width:100px;height:100px;margin-bottom:10px;background-color:#4da6ff" actionListener="#{dialogView.destroyWorld}" update="messages">
-        <p:confirm header="Ustalanie cennika" message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
+        <p:confirm header="Ustalanie cennika"  message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
         
     </p:commandButton>
     <br />
@@ -22,11 +24,13 @@
         <p:confirm header="Ustalanie cennika" message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
         
     </p:commandButton>
-    <br />
-    <p:commandButton value="Wyloguj"  style="width:100px;height:100px;background-color:#4da6ff" action="hello" update="messages">
+    
+    <p:commandButton value="Wyloguj" style="width:100px;height:100px;background:url(images/picture.png)" action="hello" update="messages">
        
         
     </p:commandButton>
+    
+   
  
     <p:confirmDialog global="true"  showEffect="fade" hideEffect="fade">
     <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
@@ -66,5 +70,13 @@
 		</p:panel>
 
 	</h:form>
+	
+	<p:commandButton value="Wyloguj"  styleClass="zdj" style="width:120px;height:120px" >
+       
+        
+    </p:commandButton>
+    
+    
+	
 </body> 
 </html>
