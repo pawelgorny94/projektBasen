@@ -29,30 +29,45 @@
 				<h:form>
 					<p:growl id="messages" showDetail="false" />
 					
-					<p:commandButton value="Ustal cennik" style="width:120px;height:120px;background:url(css/imag/money.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+					<p:commandButton value="Ustal cennik" style="width:120px;height:120px;background:url(css/imag/wallet.png) 24px 7px no-repeat #d7e2e3;text-align: center;
 	padding-top: 75px;color: black;margin-bottom:5px" actionListener="#{dialogView.destroyWorld}" update="messages">
         <p:confirm header="Ustalanie cennika"  message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
         
     </p:commandButton>
     <br />
-    <p:commandButton value="Raporty" onclick="newwindow()" style="width:120px;height:120px;background:url(css/imag/layers.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+    <p:commandButton value="Raporty" onclick="PF('dlg2').show();" style="width:120px;height:120px;background:url(css/imag/raport.png) 24px 7px no-repeat #d7e2e3;text-align: center;
 	padding-top: 75px;color: black;margin-bottom:5px" >
-        <p:confirm header="Raporty" icon="ui-icon-alert" />
+        
         
     </p:commandButton>
   
    <br></br>
-    <p:commandButton value="Zestawienie"  style="width:120px;height:120px;background:url(css/imag/charticon.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	padding-top: 75px;color: black;margin-bottom:5px" action="hello" update="messages">
+    <p:commandButton value="Zestawienie" onclick="PF('dlg1').show();" style="width:120px;height:120px;background:url(css/imag/charticon.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	padding-top: 75px;color: black;margin-bottom:5px" >
        
         
     </p:commandButton>
      <br></br>
-    <p:commandButton value="Wyloguj"  style="width:120px;height:120px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+    <p:commandButton value="Wyloguj"  style="width:120px;height:120px;background:url(css/imag/unlog.png) 24px 7px no-repeat #d7e2e3;text-align: center;
 	padding-top: 75px;color: black" action="hello" update="messages">
        
         
     </p:commandButton>
+    
+    
+    <p:dialog header="Raporty" widgetVar="dlg2" minHeight="40">
+    
+    
+    
+  
+</p:dialog>
+    
+    <p:dialog header="Zestawienie korzystania z basenu" widgetVar="dlg1" minHeight="40">
+    
+    <p:chart type="line" model="#{chartView.lineModel1}" style="height:300px;"/>
+    
+  
+</p:dialog>
    
  
     <p:confirmDialog global="true"  showEffect="fade" hideEffect="fade">
@@ -86,22 +101,7 @@
     </p:confirmDialog>
 					
 				
-				 <p:confirmDialog global="true" id="con2" showEffect="fade" visible="false" hideEffect="fade">
-    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
-    
-    <p:inputText></p:inputText>
-   <c:set var="cars"  value="#{data}"> </c:set>
-    
-    <c:forEach var="field" items="#{cars}" >
-    
-    ${field.value}
-    </c:forEach>
-    
- </h:panelGrid>
-        <p:commandButton value="Zapisz zmiany" type="button" style="float:right; postion:relative" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
-        <p:commandButton value="Anuluj" type="button" style="float:right" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
-        
-    </p:confirmDialog>
+				
 					
 				</h:form>
 
