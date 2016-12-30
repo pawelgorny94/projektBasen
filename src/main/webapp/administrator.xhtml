@@ -2,30 +2,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"> 
 
 <h:head>
  <link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+ 
+  <script language="javascript">
+            function newwindow() {
+                var showme = document.getelementbyid("con2");
+                showme.style.visibility = "visible";
+            }
+        </script>
+ 
 </h:head> 
 <body> 
+
 <h:form>
+
+
+
 		<p:panel id="panel1" header="Administrator"
 			style="margin:1pt; margin-top: 10pt" toggleable="true">
 			<h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="0">
 				<h:form>
 					<p:growl id="messages" showDetail="false" />
-					<p:commandButton value="Ustal cennik" style="width:100px;height:100px;margin-bottom:10px;background-color:#4da6ff" actionListener="#{dialogView.destroyWorld}" update="messages">
+					
+					<p:commandButton value="Ustal cennik" style="width:120px;height:120px;background:url(css/imag/money.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	padding-top: 75px;color: black;margin-bottom:5px" actionListener="#{dialogView.destroyWorld}" update="messages">
         <p:confirm header="Ustalanie cennika"  message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
         
     </p:commandButton>
     <br />
-    <p:commandButton value="Raporty" style="width:100px;height:100px;margin-bottom:10px;background-color:#4da6ff" actionListener="#{dialogView.destroyWorld}" update="messages">
-        <p:confirm header="Ustalanie cennika" message="Ustalanie cennika biletów i karnetów" icon="ui-icon-alert" />
+    <p:commandButton value="Raporty" onclick="newwindow()" style="width:120px;height:120px;background:url(css/imag/layers.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	padding-top: 75px;color: black;margin-bottom:5px" >
+        <p:confirm header="Raporty" icon="ui-icon-alert" />
         
     </p:commandButton>
-    
-    <p:commandButton value="Wyloguj" style="width:100px;height:100px;background:url(images/picture.png)" action="hello" update="messages">
+  
+   <br></br>
+    <p:commandButton value="Wyloguj"  style="width:120px;height:120px;background:url(css/imag/clock.png) 24px 7px no-repeat #d7e2e3;text-align: center;
+	padding-top: 75px;color: black" action="hello" update="messages">
        
         
     </p:commandButton>
@@ -53,6 +71,9 @@
         
         <p:outputLabel  value="Karnet miesieczny ulgowy: " />
         <p:inputText size="10" ></p:inputText>
+        
+         <p:outputLabel  value="Wejscie grupowe 12os: " />
+        <p:inputText size="10" ></p:inputText>
  </h:panelGrid>
         <p:commandButton value="Zapisz zmiany" type="button" style="float:right; postion:relative" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
         <p:commandButton value="Anuluj" type="button" style="float:right" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
@@ -60,6 +81,16 @@
     </p:confirmDialog>
 					
 				
+				 <p:confirmDialog  id="con2" showEffect="fade" visible="false" hideEffect="fade">
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+    
+    <p:inputText></p:inputText>
+    
+ </h:panelGrid>
+        <p:commandButton value="Zapisz zmiany" type="button" style="float:right; postion:relative" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        <p:commandButton value="Anuluj" type="button" style="float:right" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+        
+    </p:confirmDialog>
 					
 				</h:form>
 
@@ -69,12 +100,10 @@
 			</h:panelGrid>
 		</p:panel>
 
+
 	</h:form>
 	
-	<p:commandButton value="Wyloguj"  styleClass="zdj" style="width:120px;height:120px" >
-       
-        
-    </p:commandButton>
+	
     
     
 	

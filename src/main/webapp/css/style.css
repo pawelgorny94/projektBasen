@@ -1,13 +1,13 @@
 @CHARSET "UTF-8";
 
 
-.zdj{
+#zdj{
 	
 	
 	background:url(imag/clock.png) 24px 7px no-repeat #d7e2e3;
 	text-align: center;
 	padding-top: 75px;
-	color: black;
+	color: red;
 	
 	
 }
