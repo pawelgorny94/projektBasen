@@ -16,48 +16,63 @@
 			style="margin:10pt; margin-top: 10pt" toggleable="true">
 			<h:panelGrid columns="3" cellpadding="0">
 				<h:form>
-					<p:commandButton value="Sprzedaż"
+					<p:commandButton value="Sprzedaż" onclick="PF('dlg1').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/wallet.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
-					<p:commandButton value="Wejście"
+					<p:commandButton value="Wejście" onclick="PF('dlg2').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/user-add.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
-					<p:commandButton value="Raporty"
+					<p:commandButton value="Raporty" onclick="PF('dlg3').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/raport.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
 					<p:commandButton value="Wyloguj"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/unlog.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black" action="hello"></p:commandButton>
 
 				</h:form>
 				<h:form>
-					<p:commandButton value="Rezerwacje"
+					<p:commandButton value="Rezerwacje" onclick="PF('dlg4').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/book.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
-					<p:commandButton value="Wyjście"
+					<p:commandButton value="Wyjście" onclick="PF('dlg5').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/user-remove.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
-					<p:commandButton value="Stan"
+					<p:commandButton value="Stan" onclick="PF('dlg6').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/users-stan.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 					<br />
-					<p:commandButton value="Wydarzenia"
+					<p:commandButton value="Wydarzenia" onclick="PF('dlg7').show();"
 						style="width:120px;height:120px;margin-bottom:7px;background:url(css/imag/calendar.png) 24px 7px no-repeat #d7e2e3;text-align: center;
-	                padding-top: 75px;color: black"
-						action="hello"></p:commandButton>
+	                padding-top: 75px;color: black"></p:commandButton>
 				    <br />
+				    <p:dialog header="Sprzedaż" widgetVar="dlg1" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Wejście" widgetVar="dlg2" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Raporty" widgetVar="dlg3" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Rezerwacje" widgetVar="dlg4" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Wyjście" widgetVar="dlg5" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Stan" widgetVar="dlg6" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    <p:dialog header="Wydarzenia" widgetVar="dlg7" height="250" width="1000" position="322,66">
+	
+                    </p:dialog>
+                    
+                    
 				    </h:form>
 				    <h:form style="position:fixed;margin-top:63px;margin-left:20px; width:1000px;height:500px">
 					<p:ribbon style="position: relative;float: right" >
